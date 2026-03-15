@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab id="tabOrbit" label="ORBIT">
+				<group id="group1" label="Actions">
+					<button id="btnRefresh" label="Rafraîchir" size="large" onAction="OnRefreshClick" imageMso="Refresh" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
+
