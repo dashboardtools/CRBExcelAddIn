@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_OnLoad">
+  <ribbon>
+    <tabs>
+      <tab id="tabOrbit" label="ORBIT">
+
+        <!-- ══ Données ════════════════════════════════════════════════════ -->
+        <group id="grpData" label="Données">
+          <button id="btnRefreshAll"
+                  label="Refresh All" size="large"
+                  imageMso="Refresh"
+                  screentip="Rafraîchir tous les tableaux ORBIT"
+                  supertip="Scanne le classeur, consolide les paramètres en un seul formulaire, exécute toutes les requêtes SQL et APIs associées."
+                  onAction="RibbonRefreshAll"/>
+          <button id="btnRunQuery"
+                  label="Requête…" size="large"
+                  imageMso="QueryAppend"
+                  screentip="Exécuter une requête unique"
+                  supertip="Sélectionner une requête dans le catalogue, saisir les paramètres, injecter les résultats."
+                  onAction="RibbonRunQuery"/>
+        </group>
+
+        <!-- ══ Qualité ════════════════════════════════════════════════════ -->
+        <group id="grpQuality" label="Qualité des données">
+          <button id="btnDysqualite"
+                  label="Signaler une dysqualité" size="large"
+                  imageMso="ReviewTrackChanges"
+                  screentip="Signaler une anomalie sur les données"
+                  supertip="Identifie automatiquement le contexte (fichier, onglet, requête, paramètres), génère un email Outlook et enregistre l'incident dans SharePoint DataQualityIssues."
+                  onAction="RibbonSignalerDysqualite"/>
+        </group>
+
+        <!-- ══ Catalogue ══════════════════════════════════════════════════ -->
+        <group id="grpCatalogue" label="Catalogue">
+          <button id="btnReloadCache"
+                  label="Recharger" size="normal"
+                  imageMso="RecordsRefreshAll"
+                  screentip="Recharger le catalogue SharePoint"
+                  supertip="Efface le cache local et relit toutes les requêtes depuis SharePoint OrbitQueries."
+                  onAction="RibbonReloadCache"/>
+        </group>
+
+        <!-- ══ Traçabilité ════════════════════════════════════════════════ -->
+        <group id="grpTrace" label="Traçabilité">
+          <button id="btnClearTrace"
+                  label="Effacer la trace" size="normal"
+                  imageMso="TableEraser"
+                  screentip="Effacer l'onglet de traçabilité"
+                  supertip="Supprime l'historique local de l'onglet _ORBIT_TRACE dans ce classeur."
+                  onAction="RibbonClearTrace"/>
+        </group>
+
+        <!-- ══ Outils ══════════════════════════════════════════════════════ -->
+        <group id="grpTools" label="Outils">
+          <button id="btnSettings"
+                  label="Paramètres" size="normal"
+                  imageMso="OptionsDialog"
+                  onAction="RibbonSettings"/>
+          <button id="btnDiag"
+                  label="Diagnostics" size="normal"
+                  imageMso="TraceError"
+                  screentip="Ouvrir le fichier log local"
+                  onAction="RibbonDiagnostics"/>
+          <button id="btnAbout"
+                  label="À propos" size="normal"
+                  imageMso="Help"
+                  onAction="RibbonAbout"/>
+        </group>
+
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
